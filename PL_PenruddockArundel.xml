@@ -2,14 +2,13 @@
 <?xml-model href="REED.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="REED.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:base="tei/records/" xml:id="london" xml:lang="eng"> 
    <teiHeader>
       <fileDesc>
          <titleStmt>
             
             <title type="main">Inns of Court</title>
-
+            
             
             <funder><orgName>Andrew W. Mellon Foundation, New York, United States of America</orgName></funder>
             <funder><orgName>CANARIE</orgName></funder> 
@@ -21,8 +20,8 @@
             <funder><orgName>Social Sciences and Humanities Research Council, Ottawa,
                Canada</orgName></funder>
             
-		 <editor resp="print"><persName xml:id="AHN1">Alan H. Nelson</persName></editor>
-		 <editor resp="print"><persName>John R. Elliott, Jr.</persName></editor>
+            <editor resp="print"><persName xml:id="AHN1">Alan H. Nelson</persName></editor>
+            <editor resp="print"><persName>John R. Elliott, Jr.</persName></editor>
             
             <respStmt>
                <persName xml:id="CB">Carolyn Black</persName>
@@ -104,7 +103,7 @@
                <resp>Principal Investigator, SSHRC grant; Director of Research and General Editor</resp>
                <resp>NHPRC-Mellon Project Team Member</resp>
             </respStmt>
-
+            
             <respStmt>
                <persName>Maureen Maclean</persName>
                <orgName>Bucknell University</orgName>
@@ -205,6 +204,9 @@
                   glossary.xml file. For example, <code>gloss:histrio-1</code> dereferences to
                   <code>glossary.xml#histrio-1</code>.</p>
             </prefixDef>
+            <prefixDef ident="docu" matchPattern="([A-Z-z0-9_-]+)"
+               replacementPattern="../documents.xml#$1">
+            </prefixDef>
          </listPrefixDef>
          
          <projectDesc>
@@ -231,21 +233,34 @@
       </profileDesc>
       <revisionDesc>
          <!-- Add new major milestone changes to top -->
-         <change when="2018-02-03" who="#JAKA1">created document</change>
+         <change when="2018-02-24" who="#KM">created document</change>
       </revisionDesc>
    </teiHeader>
-
+   
    <text ana="taxon:letter" type="record">
       <body xml:lang="eng">
-         <head>Inns of Court
-            <date from-iso="YYYY" to-iso="YYYY">YYYY-YYYY</date>
-            <seg ana="taxon:RL1234" corresp="docu:RLPIC1 pp. numbers">six number code</seg></head>
+         <head>Letter of Sir Thomas Penruddock to the Earl of Arundel
+            <date when-iso="1614-01-19">1614-01-19</date>
+            <seg ana="docu:RLPC007" corresp="docu:RLPIC2 pp. 693">RLPC007</seg></head>
          <div type="transcription">
-            <head> sheet or folio<supplied>supplied from text</supplied></head>
+            <head>f [1]<supplied>(19 January)</supplied></head>
             <pb n="1" type="sheet"/>
-
+            
+<ab>...Of this Christmas also euery day hath had it parte in the celebration of the marriage of your noble cosin the Lady Frances to the Earle of Summerset, being highly graced by both there Maiesties with many fauers, & much honor donn them [of] in all kindes, such as if the late great marriage had not bene before it. I might well say hath not bene the liter. All men striueing to doe [&] honor & seruice to them in one kinde or other For besides two maskes in the Court one of great Lords the other of gentlemen. A third came from the Ins of Court men, as a present of there seruice....</ab>
+            
+            14/ a maske:  The Masque of Flowers, 6 January 1613/14
+            14/ this mariage:ie, that of Robert Ker, earl of Somerset, and Lady Frances Howard on 26 December 1613
+            
          </div>
       </body>
    </text>
-  
 </TEI>
+
+
+
+
+
+
+
+
+
